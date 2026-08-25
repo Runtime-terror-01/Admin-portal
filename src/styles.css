@@ -1,0 +1,399 @@
+/* ==========================================================================
+   AgriProcure AI Admin Portal - Design System & Global Styles (SIH 2026)
+   Ministry of Consumer Affairs, Food & Public Distribution
+   ========================================================================== */
+
+:root {
+  /* Brand Color Palette */
+  --primary-900: #082618;
+  --primary-800: #0B452C;
+  --primary-700: #0D5C3A; /* Agricultural Green */
+  --primary-600: #12794D;
+  --primary-500: #169B62;
+  --primary-400: #2EBB7E;
+  --primary-100: #E6F6EF;
+  --primary-50:  #F0FDF6;
+
+  /* Accent Colors */
+  --gold-600: #D97706;
+  --gold-500: #E5A93C; /* Harvest Gold */
+  --gold-100: #FEF3C7;
+  
+  --slate-900: #1B2A32; /* Deep Slate */
+  --slate-800: #263843;
+  --slate-700: #334856;
+  --slate-100: #F1F5F9;
+
+  --emerald-600: #059669;
+  --emerald-500: #10B981;
+  --emerald-100: #D1FAE5;
+
+  --blue-600: #2563EB;
+  --blue-500: #3B82F6;
+  --blue-100: #DBEAFE;
+
+  --purple-600: #7C3AED;
+  --purple-500: #8B5CF6;
+  --purple-100: #EDE9FE;
+
+  --danger-600: #DC2626;
+  --danger-500: #EF4444;
+  --danger-100: #FEE2E2;
+
+  /* Neutral Dark/Light Palette */
+  --bg-main: #F4F7F5;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #1B2A32;
+  --bg-sidebar-hover: #263843;
+  --bg-header: #FFFFFF;
+
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --text-white: #FFFFFF;
+
+  --border-light: #E2E8F0;
+  --border-card: #E6ECE8;
+
+  /* Shadows & Radius */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 12px -2px rgba(13, 92, 58, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 25px -3px rgba(13, 92, 58, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--slate-900);
+}
+
+/* App Shell Layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: var(--bg-main);
+  transition: margin-left var(--transition-normal);
+}
+
+.page-wrapper {
+  padding: 24px 32px 48px;
+  flex: 1;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 16px 16px 32px;
+  }
+}
+
+/* Page Header */
+.page-header-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-header-title h1 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--primary-700);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-header-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Card System */
+.agri-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.agri-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.agri-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.agri-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Badge Component */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-optimal {
+  background-color: var(--emerald-100);
+  color: var(--emerald-600);
+}
+
+.badge-moderate {
+  background-color: var(--gold-100);
+  color: var(--gold-600);
+}
+
+.badge-congested {
+  background-color: #ffedd5;
+  color: #ea580c;
+}
+
+.badge-critical {
+  background-color: var(--danger-100);
+  color: var(--danger-600);
+}
+
+.badge-blue {
+  background-color: var(--blue-100);
+  color: var(--blue-600);
+}
+
+.badge-purple {
+  background-color: var(--purple-100);
+  color: var(--purple-600);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--primary-700);
+  color: var(--text-white);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-800);
+  box-shadow: 0 4px 12px rgba(13, 92, 58, 0.25);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  border-color: var(--border-light);
+  color: var(--text-main);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--primary-50);
+  border-color: var(--primary-500);
+  color: var(--primary-700);
+}
+
+.btn-accent {
+  background-color: var(--gold-500);
+  color: #ffffff;
+}
+
+.btn-accent:hover:not(:disabled) {
+  background-color: var(--gold-600);
+  box-shadow: 0 4px 12px rgba(229, 169, 60, 0.3);
+}
+
+.btn-danger {
+  background-color: var(--danger-500);
+  color: #ffffff;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--danger-600);
+}
+
+.btn-sm {
+  padding: 5px 11px;
+  font-size: 0.8rem;
+}
+
+/* Progress Bar */
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+/* Tables */
+.agri-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.agri-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.agri-table th {
+  background-color: #f8faf9;
+  padding: 13px 16px;
+  font-weight: 700;
+  color: var(--slate-900);
+  border-bottom: 2px solid var(--border-light);
+  white-space: nowrap;
+}
+
+.agri-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-main);
+  background-color: #ffffff;
+}
+
+.agri-table tr:hover td {
+  background-color: var(--primary-50);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(27, 42, 50, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  max-width: 600px;
+  width: 100%;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: modalSlideUp 0.3s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
