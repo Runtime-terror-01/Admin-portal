@@ -1,9 +1,12 @@
-# AgriProcure AI — Government/Admin Portal
+# AgriProcure AI — Admin Portal
 
 **AgroAi Prototype** for Smart India Hackathon 2026 (SIH Problem Statement SIH26032: Farmer Procurement Scheduling & Status Intelligence).
 Ministry of Consumer Affairs, Food & Public Distribution.
 
-## Development server
+## Overview
+Admin portal for Agro.AI to manage procurement scheduling, queue tracking, farmer payouts, bottleneck analytics, and system settings.
+
+## Development Server
 
 To start a local development server, run:
 
@@ -22,3 +25,4 @@ npm run build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory.
+
